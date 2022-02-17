@@ -14,7 +14,7 @@
   <div id="app">
     <div class="container">
       <div v-for="album in albumlist" class="albumbox">
-              <!-- <p>{{album.poster}}</p> -->
+              <p>{{album.poster}}</p>
               <p>{{album.title}}</p>
               <p>{{album.author}}</p>
               <p>{{album.year}}</p>
