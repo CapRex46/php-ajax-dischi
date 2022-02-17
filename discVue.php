@@ -8,37 +8,34 @@
   <title>Document</title>
   <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div id="app">
-    <table id="usersTable">
-      <thead>
-        <tr>
-          <th>Nome</th>
-          <th>Città</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="album in albumlist">
-                <t>{{album.title}}</t>
-                <t>{{album.author}}</t>
-                <t>{{album.year}}</t>
-                <t>{{album.genre}}</t>
-        </tr>
-      </tbody>
-    </table>
+    <div class="container">
+      <div v-for="album in albumlist" class="albumbox">
+              <!-- <p>{{album.poster}}</p> -->
+              <p>{{album.title}}</p>
+              <p>{{album.author}}</p>
+              <p>{{album.year}}</p>
+              <p>{{album.genre}}</p>
+      </div>
+    </div>
+
   </div>
+
   <script>
     var app = new Vue({
       el: '#app',
       data: {
-         albumlist: [] ,
+        albumlist: []
       },
       mounted() {
-    axios.get('https://flynn.boolean.careers/exercises/api/array/music').then((response)  => {
-      this.albumlist = response.data.response;
-    }) 
-  },
+        axios.get("http://localhost/php-ajax-dischi/api/album.php")
+          .then(resp => {
+            this.albumlist = resp.data;
+          })
+      }
     })
   </script>
 </body>

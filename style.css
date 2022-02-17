@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+#app{
+    width: 100%;
+    background-color: #192E3C;
+    height: 1920px;
+}
+
+.container{
+    width: 1800px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    height: 100px;
+    color: white;
+    text-align: center;
+}
+
+p{
+}
+
+.albumbox{
+    background: rgb(110, 106, 106);
+    width: 200px;
+    height: 300px;
+    padding: 20px;
+    margin-top: 250px;
+}
