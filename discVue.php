@@ -18,7 +18,7 @@
 
               </div>
               <img :src="album.poster" alt="">
-              <p>{{album.title}}</p>
+              <h3>{{album.title}}</h3>
               <p>{{album.author}}</p>
               <p>{{album.year}}</p>
               <p>{{album.genre}}</p>
